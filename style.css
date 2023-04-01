@@ -74,13 +74,13 @@ html{
     0%{
     }
     100%{
-        transform:translateY(8px) rotate(45deg);  
+        transform:translateY(7px) rotate(25deg);  
     }
 }
 
 @keyframes segundoSpan1{
     0%{
-        transform:translateY(8px) rotate(45deg);
+        transform:translateY(7px) rotate(25deg);
     }100%{
         transform:translateY(0px) rotate(0deg);
     }
@@ -137,13 +137,13 @@ html{
     0%{
     }
     100%{
-        transform:translateY(-8px) rotate(-45deg);  
+        transform:translateY(-8px) rotate(-25deg);  
     }
 }
 
 @keyframes segundoSpan3{
     0%{
-        transform:translateY(-8px) rotate(-45deg);
+        transform:translateY(-8px) rotate(-25deg);
     }
     100%{
         transform:translateY(0px) rotate(0deg);  
@@ -184,8 +184,15 @@ html{
 }
 
 .menuDesplegable ul li{
-    margin: 10px 0;
+    line-height: 65px;
     list-style: none;
+    font-weight: bold;
+}
+
+.menuDesplegable ul li a{
+    color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 /* header inferior ( redes ) */
@@ -350,6 +357,7 @@ a{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
+    color: #777;
 }
 
 .subrayadoCard{
@@ -362,7 +370,7 @@ a{
 
 .descripcionCard{
     margin: 0;
-    opacity: .7;
+    color: #555;
 }
 
 
@@ -415,6 +423,7 @@ a{
     align-items: center;
     gap: 15px;
     padding: 50px 0;
+    color: #222;
 }
 
 .subrayadoProductos{
@@ -466,6 +475,31 @@ a{
     transform: scale(108%);
 }
 
+/* boton whatsapp */
+.contAnclajeWhatsapp{
+    width: 60px;
+    height: 60px;
+    background-color: #63A453;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anclajeWhatsapp svg{
+    color: #fff;
+    transform: scale(180%);   
+    transition: .5s ease-in-out;
+}
+
+.anclajeWhatsapp svg:hover{
+    transform: scale(220%);
+}
+
 /* efecto achicar navBar */
 
 .achicarNavbar{
@@ -499,5 +533,5 @@ a{
 }
 
 .desplegarNavbar{
-    height: 130px;
+    height: 260px;
 }
