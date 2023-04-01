@@ -16,6 +16,13 @@ html{
 }
 
 /* header superior */
+.header{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+}
 
 .contHeader{
 
@@ -23,7 +30,6 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     z-index: 50;
     width: 100%;
     padding:0 15px;
@@ -38,6 +44,7 @@ html{
     flex-direction: column;
     justify-content: center;
     gap: 6.5px;
+    cursor: pointer;
 }
 
 .span{
@@ -49,6 +56,98 @@ html{
 
 .span:nth-child(2){
     width: 25px;
+}
+
+/* efecto ambur */
+
+.span1{
+    animation: segundoSpan1 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+.span1efecto{
+    animation: span1 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes span1{
+    0%{
+    }
+    100%{
+        transform:translateY(8px) rotate(45deg);  
+    }
+}
+
+@keyframes segundoSpan1{
+    0%{
+        transform:translateY(8px) rotate(45deg);
+    }100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+}
+
+.span2{
+    animation: segundoSpan2 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+.span2efecto{
+    animation: span2 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes span2{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.5;        
+    }
+    100%{
+        transform:translateX(-45px);  
+        opacity: 0;  
+    }
+}
+
+@keyframes segundoSpan2{
+    0%{
+        transform:translateX(-45px);  
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.5;        
+    }
+    100%{           
+        opacity: 1;  
+    }
+}
+
+.span3{
+    animation: segundoSpan3 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+.span3efecto{
+    animation: span3 ease-in .3s forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes span3{
+    0%{
+    }
+    100%{
+        transform:translateY(-8px) rotate(-45deg);  
+    }
+}
+
+@keyframes segundoSpan3{
+    0%{
+        transform:translateY(-8px) rotate(-45deg);
+    }
+    100%{
+        transform:translateY(0px) rotate(0deg);  
+    }
 }
 
 .contLogo{
@@ -64,6 +163,7 @@ html{
 .carrito{
     height: 30px;
     width: auto;
+    cursor: pointer;
 }
 
 .bajoMenu{
@@ -72,6 +172,21 @@ html{
     background-color: var(--color-principal);
 }
 
+.menuDesplegable{
+    background-color: var(--color-principal);
+    display: flex;
+    width: 100%;
+    height: 0;
+    justify-content: center;
+    overflow: hidden;
+    -webkit-transform-origin-y: 0%;
+    transition: .5s ease-in-out;
+}
+
+.menuDesplegable ul li{
+    margin: 10px 0;
+    list-style: none;
+}
 
 /* header inferior ( redes ) */
 
@@ -162,7 +277,7 @@ a{
 
 .contBajar{
     position: absolute;
-    bottom: 60px;
+    bottom: 120px;
     animation-name: efectoBajar;
     animation-duration: 3s;
     animation-timing-function:cubic-bezier();
@@ -170,12 +285,11 @@ a{
 }
 
 @keyframes efectoBajar {
-    50%, 80% {
-        bottom: 30px;
-        
-        
+    50%, 90% {
+        bottom: 90px;
+          
     }
-    80%, 100%{
+    90%, 100%{
         opacity: 0;
     }
 
@@ -206,9 +320,9 @@ a{
     border: none;
     background-color: var(--color-terciario);
     position: relative;
-    left: -20px;
+    left: -40px;
     opacity: 0;
-    transition: .5s ease-in;
+    transition: 1s ease-in-out;
 }
 
 .contIconoCard{
@@ -252,7 +366,7 @@ a{
 }
 
 
-/* seccion fondo paidaje */
+/* seccion fondo paisaje */
 
 #seccionPaisaje{
     display: flex;
@@ -288,6 +402,9 @@ a{
     border-radius: 50px;
 }
 
+/* seccion productos */
+
+
 .pngHoja{
     width: 40px;
 }
@@ -310,6 +427,19 @@ a{
 
 /* imagenes de productos */
 
+.btnCerrarImg{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(180%);
+    filter: invert(1);
+    z-index: 50000;
+}
 
 .contProductos{
     display: flex;
@@ -321,6 +451,7 @@ a{
 .contImagenProducto{
     width: 100%;
     padding: 0 15px;
+    
 }
 
 .imgProducto{
@@ -331,6 +462,9 @@ a{
     transition: .7s ease-in;
 }
 
+.imgProducto:hover{
+    transform: scale(108%);
+}
 
 /* efecto achicar navBar */
 
@@ -345,4 +479,25 @@ a{
     left: 0;
     bottom: 0;
     opacity: 1;
+}
+
+/*efecto ampliar imagen producto */
+
+.ampliarImg{
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+    padding: 0;
+}
+
+.apareceFlex{
+    display: flex;
+}
+
+.desplegarNavbar{
+    height: 130px;
 }

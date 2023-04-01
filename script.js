@@ -7,6 +7,7 @@ lengthCards = cards.length;
 let imagenesProducto = document.querySelectorAll( ".imgProducto" ),
 lengthImagenesProducto = imagenesProducto.length;
 
+let menuHambur = document.querySelector(".menuHambur");
 
 window.addEventListener( "scroll", () => {
 
@@ -40,3 +41,36 @@ window.addEventListener( "scroll", () => {
     }
 
 } );
+
+for( let i = 0; i < lengthImagenesProducto; i++ ){
+    imagenesProducto[i].addEventListener( "click", () => {
+    let contImagenProducto = document.querySelectorAll( ".contImagenProducto" );
+    contImagenProducto[i].classList.add("ampliarImg");
+    let botonX = document.querySelector(".btnCerrarImg");
+
+    botonX.classList.add("apareceFlex");
+    botonX.addEventListener( "click", () => {
+        contImagenProducto[i].classList.remove("ampliarImg");
+        botonX.classList.remove("apareceFlex");
+    } );
+} )
+}
+
+
+menuHambur.addEventListener( "click", () => {
+    let menuDesplegable = document.querySelector(".menuDesplegable");
+    menuDesplegable.classList.toggle( "desplegarNavbar" );
+
+    span1=document.querySelector(".span1"),
+    span2=document.querySelector(".span2"),
+    span3=document.querySelector(".span3");
+
+    span1.classList.toggle("span1efecto");  
+    span2.classList.toggle("span2efecto");
+    span3.classList.toggle("span3efecto");
+
+} );
+
+
+
+
