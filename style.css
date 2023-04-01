@@ -1,0 +1,348 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;font-family: roboto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-principal: #EAD0C3;
+    --color-secundario: #C7A390;
+    --color-terciario: #FFFCFA;
+}
+
+/* header superior */
+
+.contHeader{
+
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    padding:0 15px;
+    height: 100px;
+    transition: 0.2s ease-in-out;
+}
+
+.menuHambur{
+    background-color: var(--color-principal);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6.5px;
+}
+
+.span{
+    display: block;
+    background-color: #000;
+    height: 1px;
+    width: 33px;
+}
+
+.span:nth-child(2){
+    width: 25px;
+}
+
+.contLogo{
+    height: 100%;
+    display: flex;
+}
+
+.imgLogo{
+    width: 100%;
+    object-fit: contain;
+}
+
+.carrito{
+    height: 30px;
+    width: auto;
+}
+
+.bajoMenu{
+    height: 100px;
+    width: 100%;
+    background-color: var(--color-principal);
+}
+
+
+/* header inferior ( redes ) */
+
+.contSubHeader{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--color-secundario);
+}
+
+.contRedes{
+    display: flex;
+    gap: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: #00000088;
+    display: flex;
+}
+
+.iconoFacebook,
+.iconoInstagram{
+    height: 25px;
+    width: auto;
+}
+
+/* inicio */
+
+.contImagenInicio{
+    background-image: url(./images/planta-vainilla.jpg);
+    height: calc(100vh - 145px );
+    background-color: #8b3c3c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contBienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.capaOscura{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #0000005b;
+}
+
+.manuscrita{
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.slogan{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+
+.botonInicio{
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px 25px;
+    font-size: 20px;
+    border: none;
+    text-transform: capitalize;
+}
+
+.contBajar{
+    position: absolute;
+    bottom: 60px;
+    animation-name: efectoBajar;
+    animation-duration: 3s;
+    animation-timing-function:cubic-bezier();
+    animation-iteration-count: infinite;
+}
+
+@keyframes efectoBajar {
+    50%, 80% {
+        bottom: 30px;
+        
+        
+    }
+    80%, 100%{
+        opacity: 0;
+    }
+
+}
+
+.bi-chevron-compact-down{
+    color: #fff;
+    transform: scale(300%);
+    
+}
+
+/* cards */
+
+#cards{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--color-terciario);
+    padding: 50px 0;
+    position: relative;
+    
+}
+
+.card{
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background-color: var(--color-terciario);
+    position: relative;
+    left: -20px;
+    opacity: 0;
+    transition: .5s ease-in;
+}
+
+.contIconoCard{
+    width: 25%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.bi-heart,
+.bi-piggy-bank,
+.bi-calendar-check{
+    width: 50px;
+    height: 50px;
+    opacity: .7;
+}
+
+.contContenidoCard{
+    width: 75%;
+}
+
+.tituloCard{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.subrayadoCard{
+    display: block;
+    height: 2px;
+    width: 50px;
+    background-color: #00000070;
+    margin-bottom: 20px;
+}
+
+.descripcionCard{
+    margin: 0;
+    opacity: .7;
+}
+
+
+/* seccion fondo paidaje */
+
+#seccionPaisaje{
+    display: flex;
+}
+
+.contImagenPaisaje{
+ 
+    background-image: url(./images/245-2451667_bosque-rojo-otoo-de-paisajes-naturales-fondos-de.jpg);
+    width: 100%;
+    background-position-y: 70%;
+    min-height: 280px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-attachment: fixed;
+}
+
+.descripcionPaisaje{
+    font-family: roboto;
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.subrayadoPaisaje{
+    display: block;
+    height: 5px;
+    width: 70px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.pngHoja{
+    width: 40px;
+}
+
+.tituloProductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 50px 0;
+}
+
+.subrayadoProductos{
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #00000070;
+    border-radius: 50px;
+}
+
+/* imagenes de productos */
+
+
+.contProductos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 100px;
+}
+
+.contImagenProducto{
+    width: 100%;
+    padding: 0 15px;
+}
+
+.imgProducto{
+    width: 100%;
+    position: relative;
+    bottom: -60px;
+    opacity: 0;
+    transition: .7s ease-in;
+}
+
+
+/* efecto achicar navBar */
+
+.achicarNavbar{
+    height: 50px;
+    transition:0.2s ease-in-out;
+}
+
+/*efecto aparece */
+
+.aparece{
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
