@@ -9,12 +9,17 @@ lengthImagenesProducto = imagenesProducto.length;
 
 let menuHambur = document.querySelector(".menuHambur");
 
+let itemsMenuDesplegable = document.querySelectorAll( ".itemMenuDesplegable" ),
+lengthItemMenuDesplegable = itemsMenuDesplegable.length;
+
+let menuDesplegable = document.querySelector(".menuDesplegable");
+
 window.addEventListener( "scroll", () => {
 
     let y = window.scrollY;
     
 
-    if ( y > 20  ){
+    if ( y > 15  ){
         headerSuperior.classList.add("achicarNavbar");
     } else {
         headerSuperior.classList.remove("achicarNavbar");
@@ -25,7 +30,7 @@ window.addEventListener( "scroll", () => {
         let distancia = cards[i].getBoundingClientRect().top;
         let altura = window.innerHeight;
 
-        if ( distancia < altura ){
+        if ( distancia + 100 < altura ){
             cards[i].classList.add("aparece");
         }
     }
@@ -35,7 +40,7 @@ window.addEventListener( "scroll", () => {
         let distancia = imagenesProducto[i].getBoundingClientRect().top;
         let altura = window.innerHeight;
 
-        if ( distancia < altura ){
+        if ( distancia + 100 < altura ){
             imagenesProducto[i].classList.add("aparece");
         }
     }
@@ -58,7 +63,7 @@ for( let i = 0; i < lengthImagenesProducto; i++ ){
 
 
 menuHambur.addEventListener( "click", () => {
-    let menuDesplegable = document.querySelector(".menuDesplegable");
+    
     menuDesplegable.classList.toggle( "desplegarNavbar" );
 
     span1=document.querySelector(".span1"),
@@ -68,6 +73,17 @@ menuHambur.addEventListener( "click", () => {
     span1.classList.toggle("span1efecto");  
     span2.classList.toggle("span2efecto");
     span3.classList.toggle("span3efecto");
+
+    for ( let i = 0; i < lengthItemMenuDesplegable; i ++ ){
+
+        itemsMenuDesplegable[i].addEventListener( "click", () => {
+            menuDesplegable.classList.remove( "desplegarNavbar" );
+            span1.classList.remove("span1efecto");  
+            span2.classList.remove("span2efecto");
+            span3.classList.remove("span3efecto");
+        } );
+    
+    }
 
 } );
 
