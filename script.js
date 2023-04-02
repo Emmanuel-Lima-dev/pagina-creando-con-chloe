@@ -14,6 +14,7 @@ lengthItemMenuDesplegable = itemsMenuDesplegable.length;
 
 let menuDesplegable = document.querySelector(".menuDesplegable");
 
+// efectos de escroll
 window.addEventListener( "scroll", () => {
 
     let y = window.scrollY;
@@ -47,6 +48,7 @@ window.addEventListener( "scroll", () => {
 
 } );
 
+//ampliar imagen
 for( let i = 0; i < lengthImagenesProducto; i++ ){
     imagenesProducto[i].addEventListener( "click", () => {
     let contImagenProducto = document.querySelectorAll( ".contImagenProducto" );
@@ -61,7 +63,7 @@ for( let i = 0; i < lengthImagenesProducto; i++ ){
 } )
 }
 
-
+//menu desplegable responsive
 menuHambur.addEventListener( "click", () => {
     
     menuDesplegable.classList.toggle( "desplegarNavbar" );
@@ -87,6 +89,8 @@ menuHambur.addEventListener( "click", () => {
 
 } );
 
+
+//auto mensaje whatsapp
 setTimeout(() => {
     
     let mensajeWhatsapp = document.querySelector( ".mensajeWhatsapp" );
