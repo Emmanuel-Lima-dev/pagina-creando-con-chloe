@@ -87,6 +87,19 @@ menuHambur.addEventListener( "click", () => {
 
 } );
 
+setTimeout(() => {
+    
+    let mensajeWhatsapp = document.querySelector( ".mensajeWhatsapp" );
+    let trianguloChat = document.querySelector( ".contAnclajeWhatsappAfter" );
 
+    setTimeout(() => {
+        mensajeWhatsapp.classList.remove( "apareceFlex" );
+        trianguloChat.classList.remove( "apareceFlex" );
+    }, "15000");
+
+    mensajeWhatsapp.classList.add( "apareceFlex" );
+    trianguloChat.classList.add( "apareceFlex" );
+    
+  }, "5000");
 
 

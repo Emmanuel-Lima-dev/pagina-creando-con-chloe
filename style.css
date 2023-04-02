@@ -478,24 +478,53 @@ a{
 }
 
 /* boton whatsapp */
+
+
 .contAnclajeWhatsapp{
     width: 60px;
     height: 60px;
-    background-color: #63A453;
+    background-color: #1BD741;
     position: fixed;
-    right: 30px;
+    right: 20px;
     bottom: 20px;
     padding: 10px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+
+.mensajeWhatsapp{
+    width: 140px;
+    height: 45px;
+    background-color: #FDF3E6;
+    position: fixed;
+    right: 100px;
+    bottom: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contAnclajeWhatsappAfter{
+    display: none;
+    position: fixed;
+    right: 5px;
+    bottom: 40px;
+    border-left: 20px solid #FDF3E6;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 100px;
+    z-index: 5000;
 }
 
 .anclajeWhatsapp svg{
     color: #fff;
     transform: scale(180%);   
     transition: .5s ease-in-out;
+    z-index: 10;
 }
 
 .anclajeWhatsapp svg:hover{
@@ -520,7 +549,7 @@ a{
 /*efecto ampliar imagen producto */
 
 .ampliarImg{
-    height: 100%;
+    height: 100vh;
     position: fixed;
     background-color: #000;
     top: 0;
