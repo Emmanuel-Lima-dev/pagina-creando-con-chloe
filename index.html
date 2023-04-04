@@ -78,7 +78,7 @@
                 <div class="contBienvenida">
                     <h1 class="manuscrita">creando con chloe</h1>
                     <p class="slogan">manualidades a mano</p>
-                    <button class="botonInicio"><a href="#seccionProductos">Productos</a></button>
+                    <a href="#seccionProductos"><button class="boton">Productos</button></a>
                     <span class="contBajar">
                         <a href="#cards">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
@@ -138,7 +138,7 @@
             </div>
         </section>
         <section id="seccionProductos">
-            <div class="tituloProductos">
+            <div class="titulo">
                 <img class="pngHoja" src="./images/decor_heading.svg" alt="">
                 <h2>Nuestros productos</h2>
                 <span class="subrayadoProductos"></span>
@@ -159,15 +159,38 @@
                 <div class="contImagenProducto"><img src="./images/difusores8.jpg" alt="" class="imgProducto"></div>
             </div>
         </section>
+        <section class="armaTuPedido">
+            <div class="contTiyuloPresupuesto">
+               <h2>Presupuesto</h2> 
+               <span class="subrayadoFooter"></span>
+            </div>
+            <div class="contCantidadPresupuesto">
+                <form action="">
+                    <label for="cantidad"><p class="textCantidad">Cantidad de difusores</p></label>
+                    <span><input type="number" min="0" max="100" placeholder="0-100" name="cantidad" class="cantidad"></span>
+                </form>
+                <p class="descripcionCantPresupuesto">(frasco, tapa difusora, 5 varillas, moño, etiqueta, esencia y emboltura)</p>
+            </div>
+            <div class="contPrecioTotal">
+                <p class="precioTotal">Precio total=</p>
+                <input class="total" type="text" value="$" size="5" readonly>
+            </div>
+            <div class="contButtonEncargar">
+                <button class="boton"><a href="">Encargar</a></button>
+            </div>
+        </section>
+        <section class="nosotros">
+            <div class="titulo">
+                <img class="pngHoja" src="./images/decor_heading.svg" alt="">
+                <h2>Nosotros</h2>
+                <span class="subrayadoProductos"></span>
+            </div>
+            <p class="textoNosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorem saepe aliquid nemo exercitationem ullam ipsum rerum. Beatae nam culpa, dolorem suscipit laudantium voluptate, corporis mollitia veritatis architecto possimus repellat consequatur quasi iste, quo autem sint excepturi? Alias maxime animi in libero doloribus, magni placeat minima blanditiis, rerum magnam similique!</p>
+        </section>
         
     </main>
     <footer id="footer">
-        <div class="contNosotrosFooter seccionFooter">
-            <h3>Nosotros</h3>
-            <span class="subrayadoFooter"></span>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium doloremque quis maxime qui? Officiis voluptas perferendis rerum minima ad, molestiae quam fugiat aspernatur dolore eos nobis a maxime, nam quos!</p>
-            
-        </div>
+        
         <div class="contContactoFooter seccionFooter">
             <h3>contacto</h3>
             <span class="subrayadoFooter"></span>

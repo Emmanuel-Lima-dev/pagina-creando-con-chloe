@@ -166,6 +166,7 @@ html{
     height: 30px;
     width: auto;
     cursor: pointer;
+    visibility: hidden;
 }
 
 .bajoMenu{
@@ -283,7 +284,7 @@ a{
     margin-bottom: 50px;
 }
 
-.botonInicio{
+.boton{
     background-color: #fff;
     position: relative;
     display: flex;
@@ -292,14 +293,15 @@ a{
     font-size: 20px;
     border: none;
     text-transform: capitalize;
+    cursor: pointer;
 }
 
-.botonInicio:hover{
-    background-color: var(--color-secundario);
-    
+.boton:hover{
+    background-color: var(--color-principal);
+    color: #fff;
 }
 
-.botonInicio:hover a{
+.boton:hover a{
     color: #fff;
 }
 
@@ -442,7 +444,7 @@ a{
     width: 40px;
 }
 
-.tituloProductos{
+.titulo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -479,7 +481,7 @@ a{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .contImagenProducto{
@@ -500,6 +502,96 @@ a{
     transform: scale(108%);
 }
 
+/* seccion prespuesto */
+
+.armaTuPedido{
+    background-color: var(--color-secundario);
+    padding: 50px 15px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.armaTuPedido::before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: var(--color-principal);
+    position: absolute;
+    bottom: -35px;
+    left: -25px;
+}
+
+.armaTuPedido::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: var(--color-terciario);
+    position: absolute;
+    bottom: -50px;
+}
+
+.contTiyuloPresupuesto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contCantidadPresupuesto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.textCantidad{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.descripcionCantPresupuesto{
+    color: #dfdfdf;
+    font-weight:lighter;
+    font-style: italic;
+}
+
+.contPrecioTotal{
+    display: flex;
+    gap: 15px;
+}
+
+.total,
+.cantidad{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: var(--color-secundario);
+    padding:2px 10px;
+    color: #fff;
+}
+
+.contButtonEncargar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*seccion nosotros */
+
+.textoNosotros{
+    padding: 0 15px 50px 15px;
+    color: #777;
+    text-align: justify;
+}
 
 /* estilos footer */
 
@@ -509,6 +601,32 @@ a{
     padding: 0 15px 50px 15px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+#footer::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: var(--color-principal);
+    position: absolute;
+    top: -55px;
+    right: 20px;
+}
+
+#footer::after{
+    content: "";
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: var(--color-terciario);
+    position: absolute;
+    top: -45px;
+    right: -20px;
 }
 
 .seccionFooter{
@@ -537,7 +655,7 @@ a{
 }
 
 .contIconoRedes{
-    border: #fff solid 1px;
+    border: #fff solid 2px;
     border-radius: 50px;
     padding: 5px;
     width: 30px;
