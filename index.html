@@ -35,12 +35,16 @@
                 </div>
             </div>
             <div class="menuDesplegable">
-                <ul>
-                    <li><a class="itemMenuDesplegable" href="#inicio">Inicio</a></li>
-                    <li><a class="itemMenuDesplegable" href="#seccionProductos">productos</a></li>
-                    <li><a class="itemMenuDesplegable" href="#footer">nosotros</a></li>
-                    <li><a class="itemMenuDesplegable" href="#footer">contacto</a></li>
-                </ul>
+                <nav>
+                    <ul>
+                        <li><a class="itemMenuDesplegable" href="#inicio">Inicio</a></li>
+                        <li><a class="itemMenuDesplegable" href="#seccionProductos">Productos</a></li>
+                        <li><a class="itemMenuDesplegable" href="#armaTuPedido">Presupuesto</a></li>
+                        <li><a class="itemMenuDesplegable" href="#nosotros">Nosotros</a></li>
+                        <li><a class="itemMenuDesplegable" href="#footer">Contacto</a></li>
+                    </ul>
+                </nav>
+                
             </div>
         </div>
         
@@ -159,7 +163,7 @@
                 <div class="contImagenProducto"><img src="./images/difusores8.jpg" alt="" class="imgProducto"></div>
             </div>
         </section>
-        <section class="armaTuPedido">
+        <section id="armaTuPedido">
             <div class="contTiyuloPresupuesto">
                <h2>Presupuesto</h2> 
                <span class="subrayadoFooter"></span>
@@ -170,17 +174,20 @@
                     <label for="cantidad"></label>
                     <span><input type="number" min="0" max="100" placeholder="0-100" name="cantidad" id="cantidad" value=""></input><button id="enviarNumero">verificar</button></span>
                 </form>
-                <p class="descripcionCantPresupuesto">Cada difusor viene con (frasco, tapa difusora, 6 varillas, moño, etiqueta personalizada, esencia y envoltura)</p>
+                <p class="descripcionCantPresupuesto1">El valor unitario es de $400 (ARS), llevando mas de 10 unidades el precio es de $300 (ARS) por difusor.</p>
+                <p class="descripcionCantPresupuesto2">Cada difusor viene con (frasco, tapa difusora, 6 varillas, moño, etiqueta personalizada, esencia y envoltura)</p>
             </div>
             <div class="contPrecioTotal">
                 <p class="precioTotal">Precio total=</p>
                 $<input id="total" type="text" value="" size="5" readonly>
             </div>
             <div class="contButtonEncargar">
-                <button class="boton"><a id="btnEncargar" href="" data-text="">Encargar</a></button>
+                <button class="boton">
+                    <a id="btnEncargar" href="" data-text="">Encargar</a>
+                </button>
             </div>
         </section>
-        <section class="nosotros">
+        <section id="nosotros">
             <div class="titulo">
                 <img class="pngHoja" src="./images/decor_heading.svg" alt="">
                 <h2>Nosotros</h2>
@@ -190,35 +197,40 @@
         </section>
         
     </main>
-    <footer id="footer">
-        
-        <div class="contContactoFooter seccionFooter">
-            <h3>contacto</h3>
-            <span class="subrayadoFooter"></span>
-            <div class="contListContacto">
-                <ul>
-                    <li><span class="contIconoRedes"><i class="fa-solid fa-mobile-screen"></i></span>+54 1159118096</li>
-                    <li><span class="contIconoRedes"><i class="fa-brands fa-whatsapp"></i></span>+54 1159118096</li>
-                    <li><span class="contIconoRedes"><i class="fa-sharp fa-solid fa-location-dot"></i></span>Gerli, Avellaneda (Bs.As.)</li>
-                </ul>
+    <footer>
+        <div id="footer">
+            <div class="contContactoFooter seccionFooter">
+                <h3>contacto</h3>
+                <span class="subrayadoFooter"></span>
+                <div class="contListContacto">
+                    <ul>
+                        <li><span class="contIconoRedes"><i class="fa-solid fa-mobile-screen"></i></span>+54 1159118096</li>
+                        <li><span class="contIconoRedes"><i class="fa-brands fa-whatsapp"></i></span>+54 1159118096</li>
+                        <li><span class="contIconoRedes"><i class="fa-sharp fa-solid fa-location-dot"></i></span>Gerli, Avellaneda (Bs.As.)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contRedesFooter seccionFooter">
+                <h3>Nuestras redes</h3>
+                <span class="subrayadoFooter"></span>
+                <div class="contIconosRedesFooter">
+                    <a href="https://www.facebook.com/profile.php?id=100090155483908">
+                        <span class="contIconoRedes">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/creandoconchloe/?fbclid=IwAR3ax4PrGdqeAzMbSnUpJ0VF7ge8dNekIqNWslv_Ny-uDZY6_NzJnOM5rJw">
+                        <span class="contIconoRedes">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                        
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="contRedesFooter seccionFooter">
-            <h3>Nuestras redes</h3>
-            <span class="subrayadoFooter"></span>
-            <div class="contIconosRedesFooter">
-                <a href="https://www.facebook.com/profile.php?id=100090155483908">
-                    <span class="contIconoRedes">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </span>
-                </a>
-                <a href="https://www.instagram.com/creandoconchloe/?fbclid=IwAR3ax4PrGdqeAzMbSnUpJ0VF7ge8dNekIqNWslv_Ny-uDZY6_NzJnOM5rJw">
-                    <span class="contIconoRedes">
-                        <i class="fa-brands fa-instagram"></i>
-                    </span>
-                    
-                </a>
-            </div>
+        
+        <div id="contCopyright">
+            <p>Copyright © 2020 Creando Con Chloe - By Emmanuel Designer</p>
         </div>
     </footer>    
 

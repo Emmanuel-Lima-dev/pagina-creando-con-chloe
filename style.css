@@ -14,6 +14,7 @@ html{
     --color-secundario: #C7A390;
     --color-terciario: #FFFCFA;
     --color-cuarto: #A87B63;
+    --color-quinto : #4E3E25;
 }
 
 /* header superior */
@@ -216,7 +217,7 @@ html{
 a{
     display: flex;
     text-decoration: none;
-    color: #555;
+    color: var(--color-quinto);
     user-select: none;
 }
 
@@ -504,7 +505,7 @@ a{
 
 /* seccion prespuesto */
 
-.armaTuPedido{
+#armaTuPedido{
     background-color: var(--color-secundario);
     padding: 60px 15px;
     color: #fff;
@@ -551,8 +552,9 @@ a{
 }
 
 #enviarNumero{
+    font-size: 16px;
     border: none;
-    padding: 5px 7px;
+    padding: 7px 9px;
     margin-left: 15px;
     background-color: var(--color-terciario);
     cursor: pointer;
@@ -569,9 +571,13 @@ a{
     margin-right: 10px;
 }
 
-.descripcionCantPresupuesto{
+.descripcionCantPresupuesto1,
+.descripcionCantPresupuesto2{
     color: #dfdfdf;
     font-weight:lighter;
+}
+
+.descripcionCantPresupuesto2{
     font-style: italic;
 }
 
@@ -585,8 +591,8 @@ a{
     margin-right: 10px;
 }
 
-.total,
-.cantidad{
+#total,
+#cantidad{
     border: none;
     border-bottom: 2px solid #fff;
     background-color: var(--color-secundario);
@@ -616,7 +622,7 @@ a{
 #footer{
     background-color: var(--color-secundario);
     color: #fff;
-    padding: 0 15px 50px 15px;
+    padding: 0 15px 15px 15px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -681,6 +687,7 @@ a{
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+    background-color: var(--color-quinto);
 }
 
 .contIconosRedesFooter{
@@ -693,7 +700,18 @@ a{
 }
 
 .contIconoRedes:hover i{
-    color: #555;
+    color: var(--color-quinto);
+}
+
+#contCopyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    width: 100%;
+    background-color: var(--color-secundario);
 }
 
 /* boton whatsapp */
@@ -712,6 +730,7 @@ a{
     justify-content: center;
     align-items: center;
     z-index: 1;
+    box-shadow: -1px 1px 10px 1px #00000083;
 }
 
 .mensajeWhatsapp{
@@ -725,6 +744,7 @@ a{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    box-shadow: -1px 1px 10px #00000046;
 }
 
 .contAnclajeWhatsappAfter{
@@ -736,7 +756,6 @@ a{
     border-bottom: 15px solid transparent;
     border-right: 15px solid transparent;
     width: 100px;
-    z-index: 5000;
 }
 
 .anclajeWhatsapp svg{

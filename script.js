@@ -110,6 +110,7 @@ setTimeout(() => {
 let cantidad = document.querySelector("#cantidad");
 let total = document.querySelector("#total");
 let enviarTotal = document.querySelector("#enviarNumero");
+let btnEnviar = document.querySelector("#btnEncargar");
 
 enviarTotal.addEventListener( "click", (e) => {
     e.preventDefault();
@@ -119,19 +120,21 @@ enviarTotal.addEventListener( "click", (e) => {
     } else {
         total.value = cantidad.value * 300;
     }
-    return total.value;
-    
+
+
 } );
-let btnEnviar = document.querySelector("#btnEncargar");
-btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`;
-btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusores`;
 
-if (total.value == 1) {
-    btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusor?`;
-    btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusor`;
-}else {
-    btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`;
-    btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusores`;
-}
-
+btnEnviar.addEventListener( "click", () => {
+    if(cantidad.value == 0){
+        btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20difusores.`;
+        btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de difusores`;
+    }
+    else if(cantidad.value == 1){
+        btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusor.`;
+        btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusor`;
+    } else {
+        btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusores.`;
+        btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusores`;
+    }
+} );
 
