@@ -107,3 +107,20 @@ setTimeout(() => {
   }, "5000");
 
 
+let cantidad = document.querySelector("#cantidad");
+let total = document.querySelector("#total");
+let enviarTotal = document.querySelector("#enviarNumero");
+
+enviarTotal.addEventListener( "click", (e) => {
+    e.preventDefault();
+
+    if( cantidad.value < 10 ){
+        return total.value = cantidad.value * 400;
+    } else {
+        return total.value = cantidad.value * 300;
+    }
+    
+    
+} );
+let btnEnviar = document.querySelector("#btnEncargar");
+btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`

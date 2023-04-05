@@ -166,17 +166,18 @@
             </div>
             <div class="contCantidadPresupuesto">
                 <form action="">
-                    <label for="cantidad"><p class="textCantidad">Cantidad de difusores</p></label>
-                    <span><input type="number" min="0" max="100" placeholder="0-100" name="cantidad" class="cantidad"></span>
+                    <p class="textCantidad">Cantidad de difusores</p>
+                    <label for="cantidad"></label>
+                    <span><input type="number" min="0" max="100" placeholder="0-100" name="cantidad" id="cantidad" value=""></input><button id="enviarNumero">verificar</button></span>
                 </form>
-                <p class="descripcionCantPresupuesto">(frasco, tapa difusora, 5 varillas, moño, etiqueta, esencia y emboltura)</p>
+                <p class="descripcionCantPresupuesto">Cada difusor viene con (frasco, tapa difusora, 6 varillas, moño, etiqueta personalizada, esencia y envoltura)</p>
             </div>
             <div class="contPrecioTotal">
                 <p class="precioTotal">Precio total=</p>
-                <input class="total" type="text" value="$" size="5" readonly>
+                $<input id="total" type="text" value="" size="5" readonly>
             </div>
             <div class="contButtonEncargar">
-                <button class="boton"><a href="">Encargar</a></button>
+                <button class="boton"><a id="btnEncargar" href="">Encargar</a></button>
             </div>
         </section>
         <section class="nosotros">
