@@ -516,7 +516,7 @@ a{
     gap: 40px;
 }
 
-.armaTuPedido::before{
+#armaTuPedido::before{
     content: "";
     display: block;
     width: 70px;
@@ -528,7 +528,7 @@ a{
     left: -25px;
 }
 
-.armaTuPedido::after{
+#armaTuPedido::after{
     content: "";
     display: block;
     width: 100px;
