@@ -115,12 +115,23 @@ enviarTotal.addEventListener( "click", (e) => {
     e.preventDefault();
 
     if( cantidad.value < 10 ){
-        return total.value = cantidad.value * 400;
+        total.value = cantidad.value * 400;
     } else {
-        return total.value = cantidad.value * 300;
+        total.value = cantidad.value * 300;
     }
-    
+    return total.value;
     
 } );
 let btnEnviar = document.querySelector("#btnEncargar");
-btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`
+btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`;
+btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusores`;
+
+if (total.value == 1) {
+    btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusor?`;
+    btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusor`;
+}else {
+    btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&amp;text=Hola,%20¿para%20hacerte%20un%20pedido%20de%20${total.value}%20difusores?`;
+    btnEnviar.dataset.text = `Hola, para hacerte un pedido de ${total.value} difusores`;
+}
+
+
