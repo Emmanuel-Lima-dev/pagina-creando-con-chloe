@@ -712,6 +712,7 @@ a{
     color: #fff;
     width: 100%;
     background-color: var(--color-secundario);
+    border-top: #fff solid 1px;
 }
 
 /* boton whatsapp */
