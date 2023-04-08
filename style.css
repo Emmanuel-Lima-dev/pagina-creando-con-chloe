@@ -234,6 +234,9 @@ a{
     justify-content: center;
 }
 
+.contIconoRedesSinFondo{
+    margin-right: 15px;
+}
 
 /* inicio */
 
@@ -571,14 +574,15 @@ a{
     margin-right: 10px;
 }
 
-.descripcionCantPresupuesto1,
-.descripcionCantPresupuesto2{
-    color: #dfdfdf;
+.descripcionCantPresupuesto1{
+    color: #eeeeee;
     font-weight:lighter;
 }
 
 .descripcionCantPresupuesto2{
     font-style: italic;
+    color: #dfdfdf;
+    font-weight:lighter;
 }
 
 .contPrecioTotal{
@@ -591,7 +595,7 @@ a{
     margin-right: 10px;
 }
 
-#total,
+.total,
 #cantidad{
     border: none;
     border-bottom: 2px solid #fff;
@@ -610,9 +614,15 @@ a{
 /*seccion nosotros */
 
 .textoNosotros{
+    font-size: 18px;
     padding: 0 15px 75px 15px;
     color: #777;
     text-align: justify;
+    line-height: 25px;
+    position: relative;
+    left: 40px;
+    opacity: 0;
+    transition: 1s ease-out;
 }
 
 
@@ -671,7 +681,7 @@ a{
 .contListContacto ul{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .contListContacto ul li{
@@ -804,4 +814,8 @@ a{
 
 .desplegarNavbar{
     height: 330px;
+}
+
+.bgcWhite{
+    background-color: #fff ;
 }

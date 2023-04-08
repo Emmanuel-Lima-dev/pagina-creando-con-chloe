@@ -14,13 +14,14 @@ lengthItemMenuDesplegable = itemsMenuDesplegable.length;
 
 let menuDesplegable = document.querySelector(".menuDesplegable");
 
+let textoNosotros = document.querySelector( ".textoNosotros" );
 // efectos de escroll
 window.addEventListener( "scroll", () => {
 
     let y = window.scrollY;
     
 
-    if ( y > 15  ){
+    if ( y > 20  ){
         headerSuperior.classList.add("achicarNavbar");
     } else {
         headerSuperior.classList.remove("achicarNavbar");
@@ -31,7 +32,7 @@ window.addEventListener( "scroll", () => {
         let distancia = cards[i].getBoundingClientRect().top;
         let altura = window.innerHeight;
 
-        if ( distancia + 100 < altura ){
+        if ( distancia + 80 < altura ){
             cards[i].classList.add("aparece");
         }
     }
@@ -41,10 +42,17 @@ window.addEventListener( "scroll", () => {
         let distancia = imagenesProducto[i].getBoundingClientRect().top;
         let altura = window.innerHeight;
 
-        if ( distancia + 100 < altura ){
+        if ( distancia + 80 < altura ){
             imagenesProducto[i].classList.add("aparece");
         }
     }
+
+        let distancia = textoNosotros.getBoundingClientRect().top;
+        let altura = window.innerHeight;
+
+        if ( distancia + 60 < altura ){
+            textoNosotros.classList.add("aparece");
+        }
 
 } );
 
@@ -111,6 +119,7 @@ let cantidad = document.querySelector("#cantidad");
 let total = document.querySelector("#total");
 let enviarTotal = document.querySelector("#enviarNumero");
 let btnEnviar = document.querySelector("#btnEncargar");
+let inputTotal = document.querySelector(".total");
 
 enviarTotal.addEventListener( "click", (e) => {
     e.preventDefault();
@@ -125,16 +134,20 @@ enviarTotal.addEventListener( "click", (e) => {
 } );
 
 btnEnviar.addEventListener( "click", () => {
+    inputTotal.classList.add("bgcWhite");
     if(cantidad.value == 0){
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20difusores.`;
         btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de difusores`;
+        inputTotal.classList.remove("bgcWhite");
     }
     else if(cantidad.value == 1){
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusor.`;
         btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusor`;
+        inputTotal.classList.add("bgcWhite");
     } else {
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusores.`;
         btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusores`;
+        inputTotal.classList.add("bgcWhite");
     }
 } );
 
