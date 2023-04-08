@@ -30,13 +30,12 @@ html{
 
     background-color: var(--color-principal);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 50;
     width: 100%;
     padding:0 15px;
     height: 100px;
     transition: 0.2s ease-in-out;
+    gap: calc(50% - 115px);
 }
 
 .menuHambur{
@@ -47,6 +46,8 @@ html{
     justify-content: center;
     gap: 6.5px;
     cursor: pointer;
+    justify-self: flex-start;
+    
 }
 
 .span{
@@ -154,7 +155,7 @@ html{
 
 .contLogo{
     height: 100%;
-    width: 40%;
+    width: 150px;
     display: flex;
 }
 
@@ -633,10 +634,14 @@ form{
     position: relative;
     left: 40px;
     opacity: 0;
-    transition: 1s ease-out;
+    transition: 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
-
+.linkSaberMas{
+    color: var(--color-quinto);
+    text-decoration:underline;
+    display: inline-block;
+}
 
 /* estilos footer */
 

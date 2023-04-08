@@ -47,12 +47,12 @@ window.addEventListener( "scroll", () => {
         }
     }
 
-        let distancia = textoNosotros.getBoundingClientRect().top;
-        let altura = window.innerHeight;
+    let distancia = textoNosotros.getBoundingClientRect().top;
+    let altura = window.innerHeight;
 
-        if ( distancia + 60 < altura ){
-            textoNosotros.classList.add("aparece");
-        }
+    if ( distancia + 60 < altura ){
+        textoNosotros.classList.add("aparece");
+    }
 
 } );
 
@@ -123,6 +123,7 @@ let inputTotal = document.querySelector(".total");
 
 enviarTotal.addEventListener( "click", (e) => {
     e.preventDefault();
+
     if(cantidad.value > 0){
         inputTotal.classList.add("bgcWhite");
     } else {
