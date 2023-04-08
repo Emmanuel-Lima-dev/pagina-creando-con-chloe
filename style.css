@@ -575,7 +575,7 @@ a{
 }
 
 .descripcionCantPresupuesto1{
-    color: #ffffff;
+    color: #ffffffd3;
 }
 
 .descripcionCantPresupuesto2{
@@ -608,9 +608,11 @@ form{
     background-color: var(--color-secundario);
     padding:2px 0px;
     color: #fff;
-    margin: 20px 0;
 }
 
+.total{
+    margin: 20px 0;
+}
 .contButtonEncargar{
     display: flex;
     justify-content: center;
