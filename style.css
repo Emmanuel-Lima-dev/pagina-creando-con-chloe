@@ -575,8 +575,7 @@ a{
 }
 
 .descripcionCantPresupuesto1{
-    color: #eeeeee;
-    font-weight:lighter;
+    color: #ffffff;
 }
 
 .descripcionCantPresupuesto2{
@@ -612,7 +611,9 @@ a{
 
 
 /*seccion nosotros */
-
+#nosotros{
+    overflow: hidden;
+}
 .textoNosotros{
     font-size: 18px;
     padding: 0 15px 75px 15px;
@@ -817,5 +818,7 @@ a{
 }
 
 .bgcWhite{
-    background-color: #fff ;
+    background-color: var(--color-terciario) ;
+    color: #000;
+    border: none;
 }

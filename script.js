@@ -123,6 +123,16 @@ let inputTotal = document.querySelector(".total");
 
 enviarTotal.addEventListener( "click", (e) => {
     e.preventDefault();
+    if(cantidad.value > 0){
+        inputTotal.classList.add("bgcWhite");
+    } else {
+        inputTotal.classList.remove("bgcWhite");
+    }
+    
+    cantidad.addEventListener( "click", () => {
+        inputTotal.classList.remove("bgcWhite");
+        total.value = 0;
+    } )
 
     if( cantidad.value < 10 ){
         total.value = cantidad.value * 400;
@@ -133,21 +143,24 @@ enviarTotal.addEventListener( "click", (e) => {
 
 } );
 
+
+
+
 btnEnviar.addEventListener( "click", () => {
-    inputTotal.classList.add("bgcWhite");
+   
+    
+    
+    
     if(cantidad.value == 0){
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20difusores.`;
-        btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de difusores`;
-        inputTotal.classList.remove("bgcWhite");
+        btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de difusores`;        
     }
     else if(cantidad.value == 1){
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusor.`;
         btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusor`;
-        inputTotal.classList.add("bgcWhite");
     } else {
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20${cantidad.value}%20difusores.`;
         btnEnviar.dataset.text = `Hola, quisiera realizar un pedido de ${cantidad.value} difusores`;
-        inputTotal.classList.add("bgcWhite");
     }
 } );
 
