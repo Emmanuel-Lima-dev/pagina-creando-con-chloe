@@ -572,6 +572,7 @@ a{
     font-size: 20px;
     display: inline-block;
     margin-right: 10px;
+    text-transform: uppercase;
 }
 
 .descripcionCantPresupuesto1{
@@ -592,6 +593,7 @@ a{
 .precioTotal{
     font-size: 20px;
     margin-right: 10px;
+    text-transform: uppercase;
 }
 
 .total,
