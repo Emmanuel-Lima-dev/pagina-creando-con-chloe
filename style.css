@@ -598,7 +598,9 @@ form{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    flex-direction: row;
 }
 
 .total,
@@ -608,11 +610,9 @@ form{
     background-color: var(--color-secundario);
     padding:2px 0px;
     color: #fff;
+    padding-left: 1px;
 }
 
-.total{
-    margin: 20px 0;
-}
 .contButtonEncargar{
     display: flex;
     justify-content: center;
