@@ -558,8 +558,7 @@ a{
 #enviarNumero{
     font-size: 16px;
     border: none;
-    padding: 7px 9px;
-    margin-left: 15px;
+    padding: 5px 7px;
     background-color: var(--color-terciario);
     cursor: pointer;
 }
@@ -572,7 +571,6 @@ a{
 .textCantidad{
     font-size: 20px;
     display: inline-block;
-    margin:0 10px 10px 0;
 }
 
 .descripcionCantPresupuesto1{
@@ -602,6 +600,7 @@ form{
     justify-content: start;
     margin-bottom: 15px;
     flex-direction: row;
+    gap: 5px;
 }
 
 .total,
@@ -613,6 +612,7 @@ form{
     color: #fff;
     padding-left: 1px;
 }
+
 
 .contButtonEncargar{
     display: flex;
