@@ -180,12 +180,13 @@ html{
 .menuDesplegable{
     background-color: var(--color-principal);
     display: flex;
+    visibility: hidden;
+    opacity: 0;
     width: 100%;
-    height: 0;
+    height: 100%;
     justify-content: center;
     overflow: hidden;
-    -webkit-transform-origin-y: 0%;
-    transition: .5s ease-in-out;
+    transition: .5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
 .menuDesplegable ul li{
@@ -315,7 +316,7 @@ a{
     bottom: 120px;
     animation-name: efectoBajar;
     animation-duration: 3s;
-    animation-timing-function:cubic-bezier();
+    transition: 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
     animation-iteration-count: infinite;
 }
 
@@ -829,7 +830,8 @@ form{
 }
 
 .desplegarNavbar{
-    height: 330px;
+    visibility: visible;
+    opacity: 1;
 }
 
 .bgcWhite{
