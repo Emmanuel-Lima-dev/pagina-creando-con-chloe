@@ -121,8 +121,8 @@ let enviarTotal = document.querySelector("#enviarNumero");
 let btnEnviar = document.querySelector("#btnEncargar");
 let inputTotal = document.querySelector(".total");
 
-enviarTotal.addEventListener( "click", (e) => {
-    e.preventDefault();
+cantidad.addEventListener( "keyup", () => {
+    
 
     if(cantidad.value > 0){
         inputTotal.classList.add("bgcWhite");
@@ -132,7 +132,6 @@ enviarTotal.addEventListener( "click", (e) => {
     
     cantidad.addEventListener( "click", () => {
         inputTotal.classList.remove("bgcWhite");
-        total.value = 0;
     } )
 
     if( cantidad.value < 10 ){
