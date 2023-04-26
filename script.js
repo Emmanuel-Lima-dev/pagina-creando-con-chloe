@@ -147,9 +147,7 @@ cantidad.addEventListener( "keyup", () => {
 
 
 btnEnviar.addEventListener( "click", () => {
-   
-    
-    
+      
     
     if(cantidad.value == 0){
         btnEnviar.href = `https://api.whatsapp.com/send?phone=+541159118096&text=Hola,%20quisiera%20realizar%20un%20pedido%20de%20difusores.`;
