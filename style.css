@@ -586,6 +586,7 @@ a{
 .contPrecioTotal{
     display: flex;
     gap: 15px;
+    margin-bottom: 15px;
 }
 
 .precioTotal{
