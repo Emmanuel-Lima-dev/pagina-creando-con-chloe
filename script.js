@@ -137,7 +137,7 @@ cantidad.addEventListener( "keyup", () => {
     if( cantidad.value < 10 ){
         total.value = cantidad.value * 400;
     } else {
-        total.value = cantidad.value * 300;
+        total.value = cantidad.value * 350;
     }
 
 
